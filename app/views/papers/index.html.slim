@@ -8,12 +8,12 @@ h1 英語論文執筆サポートサービス
   h5 原文(翻訳後)
   = text_area_tag :en_original, @en_original, :disabled=>true, :cols=>60, :rows=>5
   br
-  = submit_tag(['反映'], :name=>'reflect')
+  = submit_tag(['この文を編集する'], :name=>'reflect')
   h6 ↓
   h5 編集してください
   = text_area_tag :edit_en_original, @edit_en_original, :cols=>60, :rows=>5
   br
   = submit_tag '翻訳'
   h6 ↓
-  h5 あなたの書いた英語の翻訳
+  h5 あなたの書いた英語の翻訳(ここで自分の書いた英語の妥当性をチェックしてください)
   = text_area_tag :ja_edit_en_original, @ja_edit_en_original, :disabled=>true, :cols=>60, :rows=>5
