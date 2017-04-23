@@ -23,6 +23,4 @@ class PapersController < ApplicationController
     render json: {eng: data}.to_json, status: 200
   end
 
-  def start_translate
-  end
 end

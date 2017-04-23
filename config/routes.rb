@@ -5,5 +5,4 @@ Rails.application.routes.draw do
 
   post 'translate' => 'papers#translate'
   post 'translate_sentence' => 'papers#translate_sentence'
-  post 'start_translate' => 'papers#start_translate'
 end

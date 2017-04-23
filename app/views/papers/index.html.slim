@@ -18,10 +18,12 @@ h1 英語論文執筆サポートサービス
   h5 あなたの書いた英語の翻訳(ここで自分の書いた英語の妥当性をチェックしてください)
   = text_area_tag :ja_edit_en_original, @ja_edit_en_original, :disabled=>true, :cols=>60, :rows=>5
   br
-  = link_to '修正を開始する', start_translate_path, :id=>:start_translate, method: :post, remote: true
+  = link_to '開始する', root_path, :id=>:start_translate
   br
-  = text_area_tag :ja_sentence
+  = text_area_tag :ja_sentence, '', :disabled=>true
   br
   = link_to '翻訳', translate_sentence_path, :id=>:translate_sentence, method: :post, remote: true 
   br
   = text_area_tag :en_sentence
+  br
+  = link_to '次の文章', root_path, :id=>:next_sentence
