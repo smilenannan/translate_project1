@@ -14,4 +14,7 @@ class PapersController < ApplicationController
 
     render :action=>:index
   end
+
+  def translate_sentence
+  end
 end

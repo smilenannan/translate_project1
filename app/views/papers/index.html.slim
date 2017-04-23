@@ -20,4 +20,6 @@ h1 英語論文執筆サポートサービス
   br
   = text_area_tag :ja_sentence
   br
+  = link_to '翻訳', translate_sentence_path, :id=>:translate_sentence, method: :post, remote: true 
+  br
   = text_area_tag :en_sentence
