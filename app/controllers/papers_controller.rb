@@ -16,5 +16,10 @@ class PapersController < ApplicationController
   end
 
   def translate_sentence
+    if request.xhr?
+      data = getTranslate(params[:str])
+    end
+    
+    render json: {eng: data}.to_json, status: 200
   end
 end
