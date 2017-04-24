@@ -39,5 +39,7 @@ all = ->
     $('#en_sentence').val('')
     
     return false 
+  
+  $('#original').autosize()
 
-$(document).on('turbolinks:load', all)
+$(document).ready(all)
