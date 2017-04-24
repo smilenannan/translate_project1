@@ -3,27 +3,22 @@ h1 英語論文執筆サポートサービス
   h5 原文
   = text_area_tag :original, @original, :cols=>60, :rows=>5
   br
-  = submit_tag '翻訳'
-  h6 ↓
-  h5 原文(翻訳後)
-  = text_area_tag :en_original, @en_original, :disabled=>true, :cols=>60, :rows=>5
+  = link_to '翻訳を開始する', root_path, :id=>:start_translate
   br
-  = submit_tag(['この文を編集する'], :name=>'reflect')
-  h6 ↓
-  h5 編集してください
+  = text_area_tag :ja_sentence, '', :disabled=>true, :cols=>60, :rows=>3
+  br
+  = link_to '翻訳', translate_sentence_path, :id=>:translate_sentence, method: :post, remote: true 
+  h6 ↓修正前
+  = text_area_tag :translated_ja_sentence, '', :disabled=>true, :cols=>60, :rows=>3
+  h6 ↓修正後
+  = text_area_tag :en_sentence, '', :cols=>60, :rows=>3
+  br
+  = link_to '次の文章を翻訳する', root_path, :id=>:next_sentence 
+  br
+  h5 翻訳後
   = text_area_tag :edit_en_original, @edit_en_original, :cols=>60, :rows=>5
   br
   = submit_tag '翻訳'
   h6 ↓
   h5 あなたの書いた英語の翻訳(ここで自分の書いた英語の妥当性をチェックしてください)
   = text_area_tag :ja_edit_en_original, @ja_edit_en_original, :disabled=>true, :cols=>60, :rows=>5
-  br
-  = link_to '開始する', root_path, :id=>:start_translate
-  br
-  = text_area_tag :ja_sentence, '', :disabled=>true
-  br
-  = link_to '翻訳', translate_sentence_path, :id=>:translate_sentence, method: :post, remote: true 
-  br
-  = text_area_tag :en_sentence
-  br
-  = link_to '次の文章', root_path, :id=>:next_sentence
