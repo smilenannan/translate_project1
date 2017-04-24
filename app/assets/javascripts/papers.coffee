@@ -19,7 +19,7 @@ all = ->
     array_original = $('#original').val().split('。')
     localStorage['original'] = JSON.stringify(array_original)
     $('#ja_sentence').val(array_original[0])
-    
+
     return false
 
 
@@ -40,6 +40,6 @@ all = ->
     
     return false 
   
-  $('#original').autosize()
+  $('.text_area').autosize()
 
 $(document).ready(all)
