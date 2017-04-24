@@ -1,7 +1,7 @@
 h1 英語論文執筆サポートサービス
 = form_tag(:action=>:translate, method: 'post') do
   h5 原文
-  = text_area_tag :original, @original, :cols=>60, :rows=>5
+  = text_area_tag :original, @original
   br
   = link_to '翻訳を開始する', root_path, :id=>:start_translate
   br
