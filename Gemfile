@@ -59,3 +59,4 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 
 gem 'autosize'
+gem 'bower-rails'

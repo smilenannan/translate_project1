@@ -2,7 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 all = ->
-
   $('#start_translate').on 'click', ->
     array_original = $('#original').val().split('。')
     localStorage['original'] = JSON.stringify(array_original)
@@ -18,7 +17,13 @@ all = ->
       $('#translated_ja_sentence').val(data.eng)
       return
 
+    $('#original').highlightTextarea({
+      words: $('#ja_sentence').val()
+    })
+
+
   $('#next_sentence').on 'click', ->
+
     if $('#edit_en_original').val()==""
       localStorage['edit_en_original'] = ""
 
@@ -40,10 +45,14 @@ all = ->
       $('#translated_ja_sentence').val(data.eng)
       return
 
-    $('#translated_ja_sentence').val('')
-    $('#en_sentence').val('')
+    location.reload() 
+    
+    $('#original').highlightTextarea({
+      words: $('#ja_sentence').val()
+    })
 
-  
+
   $('.text_area').autosize()
+
 
 $(document).ready(all)
