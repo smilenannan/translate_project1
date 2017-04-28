@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-highlighttextarea/jquery.highlighttextarea
 //= require_tree .
 //= require bootstrap-sprockets
+//= require jquery.autosize

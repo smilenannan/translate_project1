@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'papers#index'
 
   post 'translate' => 'papers#translate'
+  post 'translate_sentence' => 'papers#translate_sentence'
 end
