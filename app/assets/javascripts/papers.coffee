@@ -16,10 +16,8 @@ all = ->
       $('#en_sentence').val(data.eng)
       $('#translated_ja_sentence').val(data.eng)
       return
-
-    $('#original').highlightTextarea({
-      words: $('#ja_sentence').val()
-    })
+ 
+    $('#original').highlightTextarea('setWords', $('#ja_sentence').val())
 
 
   $('#next_sentence').on 'click', ->
@@ -45,14 +43,9 @@ all = ->
       $('#translated_ja_sentence').val(data.eng)
       return
 
-    location.reload() 
-    
-    $('#original').highlightTextarea({
-      words: $('#ja_sentence').val()
-    })
+    $('#original').highlightTextarea('setWords', $('#ja_sentence').val())
 
 
   $('.text_area').autosize()
-
 
 $(document).ready(all)
