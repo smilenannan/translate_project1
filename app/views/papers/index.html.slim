@@ -6,7 +6,6 @@
         h5 原文
         = text_area_tag :original, @original, :class=>:text_area
       .col-sm-4
-        = link_to '翻訳を開始する', translate_sentence_path, :id=>:start_translate, method: :post, remote: true 
         br
         = text_area_tag :ja_sentence, '', :disabled=>true, :class=>:text_area
         br
@@ -15,7 +14,8 @@
         h6 ↓修正後
         = text_area_tag :en_sentence, '', :class=>:text_area
         br
-        = link_to '次の文章を翻訳する', translate_sentence_path, :id=>:next_sentence, method: :post, remote: true 
+        = link_to '翻訳を開始する', translate_sentence_path, :id=>:start_translate, :class=>"btn btn-primary", method: :post, remote: true 
+        = link_to '次の文章を翻訳する', translate_sentence_path, :id=>:next_sentence, :class=>"btn btn-info", method: :post, remote: true 
       .col-sm-4
         h5 翻訳後
         = text_area_tag :edit_en_original, @edit_en_original, :class=>:text_area
