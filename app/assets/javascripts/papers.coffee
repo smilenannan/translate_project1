@@ -5,6 +5,13 @@ all = ->
   $('#next_sentence').hide()
   localStorage['original'] = null
   $('#original').highlightTextarea(id: 'demoCustom')
+  $('#ja_sentence').balloon({
+    html: true,
+    contents: '<button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 検索</button>',
+    classname: 'here',
+    position: 'top right',
+    minLifetime: 1000
+  })
 
   $('#start_translate').on 'click', ->
     array_original = $('#original').val().split('。')
@@ -23,8 +30,6 @@ all = ->
     $('#original').highlightTextarea('setWords', $('#ja_sentence').val())
     $('#start_translate').hide()
     $('#next_sentence').show()
-
-
 
   $('#next_sentence').on 'click', ->
     if $('#edit_en_original').val()==""
@@ -51,5 +56,10 @@ all = ->
 
     if localStorage['original'] == '[""]'
       alert 'お疲れ様です。世界に飛び出しましょう。'
+
+  $('#search').on 'click', ->
+    selected_word = $('#ja_sentence').getSelection() 
+    if selected_word != ''
+    end
 
 $(document).ready(all)

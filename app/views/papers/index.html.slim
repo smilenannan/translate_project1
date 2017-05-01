@@ -9,13 +9,14 @@
     .col-md-4
       = text_area_tag :ja_sentence, '', :class=>"text_area form-control"
       span [id='arrow2', class="glyphicon glyphicon-triangle-bottom"]
-      h8 翻訳
+      h9 翻訳
+      span [id='search', class="glyphicon glyphicon-search btn btn-warning btn-sm pull-right"]
+        h8 単語を検索
       .en
         = text_area_tag :translated_ja_sentence, '', :disabled=>true, :class=>"text_area form-control"
         span [class="glyphicon glyphicon-triangle-bottom"]
         span [class="glyphicon glyphicon-pencil"]
         = text_area_tag :en_sentence, '', :class=>"text_area form-control"
-      br
       = link_to '翻訳を開始する', translate_sentence_path, :id=>:start_translate, :class=>"btn btn-primary", method: :post, remote: true 
       = link_to '次の文章を翻訳する', translate_sentence_path, :id=>:next_sentence, :class=>"btn btn-info", method: :post, remote: true 
     .col-md-1
