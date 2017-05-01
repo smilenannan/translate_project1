@@ -2,9 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 all = ->
-  $('.text_area').autosize()
   $('#next_sentence').hide()
   localStorage['original'] = null
+  $('#original').highlightTextarea(id: 'demoCustom')
 
   $('#start_translate').on 'click', ->
     array_original = $('#original').val().split('。')

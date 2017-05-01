@@ -3,10 +3,45 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .text_area {
-  min-height: 300px;
-  width: 80%;
+  overflow: scroll;
+  min-height: 25vh;
+  width: 100vh;
+  resize: none;
 }
 
-.glyphicon {
+#original, #edit_en_original {
+  min-height: 85vh;
+}
+
+.glyphicon-arrow-right {
+  padding-top: 65vh;
+  padding-left: 10px;
   font-size: 40px;
+}
+
+#arrow1 {
+  padding-top: 15vh;
+}
+
+
+#arrow2 {
+  padding-left: 45%;
+}
+
+
+.col-md-4 {
+  padding: 0px;
+  padding-top: 35px;
+}
+
+.en {
+  border-radius: 6px;
+  border: solid;
+}
+
+#demoCustom mark {
+  padding:0 3px;
+  margin:-1px -4px;
+  border-radius:0.5em;
+  border:1px solid pink;
 }
