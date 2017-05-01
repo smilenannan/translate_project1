@@ -25,6 +25,7 @@ all = ->
     $('#next_sentence').show()
 
 
+
   $('#next_sentence').on 'click', ->
     if $('#edit_en_original').val()==""
       localStorage['edit_en_original'] = ""
