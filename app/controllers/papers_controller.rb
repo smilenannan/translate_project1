@@ -31,7 +31,7 @@ class PapersController < ApplicationController
       word = params[:word]
       url = "http://ejje.weblio.jp/content/" + word
       html = Nokogiri::HTML(open(URI.encode url))
-     end
+    end
 
     data = ''
     i = 0
@@ -46,8 +46,8 @@ class PapersController < ApplicationController
     f.puts data
     f.close
 
-    if system('bundle exec erb2slim ./app/views/shared/_word.html.erb ./app/views/shared/_word.html.slim')
-      render html: data, status: 200
-    end
+    #if system('bundle exec erb2slim ./app/views/shared/_word.html.erb ./app/views/shared/_word.html.slim')
+    render html: data, status: 200
+    #end
   end
 end

@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require jquery-highlighttextarea/jquery.highlighttextarea
 //= require jquery.selection-1.0-beta/jquery.selection
-//= require jquery.balloon.js/docs/js/jquery.balloon
-//= require remodal/dist/remodal
+//= require remodal/dist/remodal.min
 //= require_tree .
 //= require bootstrap-sprockets
