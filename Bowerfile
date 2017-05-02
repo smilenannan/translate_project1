@@ -3,4 +3,4 @@
 
 # asset 'bootstrap'
 asset 'jquery-highlighttextarea'
-asset 'mark.js'
+asset 'remodal'

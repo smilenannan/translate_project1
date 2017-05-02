@@ -60,3 +60,7 @@ gem 'bootstrap-sass'
 
 gem 'autosize'
 gem 'bower-rails'
+
+gem 'nokogiri'
+
+gem 'html2slim'

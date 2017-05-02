@@ -2,6 +2,6 @@
   "name": "dsl-generated-dependencies",
   "dependencies": {
     "jquery-highlighttextarea": "latest",
-    "mark.js": "latest"
+    "remodal": "latest"
   }
 }

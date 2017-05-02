@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-highlighttextarea/jquery.highlighttextarea
+//= require jquery.selection-1.0-beta/jquery.selection
+//= require remodal/dist/remodal.min
 //= require_tree .
 //= require bootstrap-sprockets
