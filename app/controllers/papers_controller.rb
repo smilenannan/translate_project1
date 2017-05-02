@@ -23,4 +23,31 @@ class PapersController < ApplicationController
     render json: {eng: data}.to_json, status: 200
   end
 
+  def look_up_word
+    require "open-uri"
+    require "nokogiri"
+
+    if request.xhr?
+      word = params[:word]
+      url = "http://ejje.weblio.jp/content/" + word
+      html = Nokogiri::HTML(open(URI.encode url))
+     end
+
+    data = ''
+    i = 0
+    html.css('.mainBlock').each do |main|
+      i+=1
+      if i ==3
+        data = main
+      end
+    end
+
+    f = File.open('./app/views/shared/_word.html.erb', 'w')
+    f.puts data
+    f.close
+
+    if system('bundle exec erb2slim ./app/views/shared/_word.html.erb ./app/views/shared/_word.html.slim')
+      render html: data, status: 200
+    end
+  end
 end

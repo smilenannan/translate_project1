@@ -25,4 +25,6 @@
       h5 翻訳後
       = text_area_tag :edit_en_original, @edit_en_original, :class=>"text_area form-control"
 
-//= render partial: 'shared/change' 
+.remodal[data-remodal-id="modal" data-remodal-options="hashTracking:false"]
+  button.remodal-close[data-remodal-action="close"]
+  = render partial: "shared/word"
